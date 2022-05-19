@@ -1,0 +1,11 @@
+
+www.google.com [172.217.169.100] yoklanyor32 bayt veri ile:
+172.217.169.100 cevab: bayt=32 sre=43ms TTL=112
+172.217.169.100 cevab: bayt=32 sre=44ms TTL=112
+172.217.169.100 cevab: bayt=32 sre=38ms TTL=112
+172.217.169.100 cevab: bayt=32 sre=42ms TTL=112
+
+172.217.169.100 i‡in Ping istatisti§i:
+    Paket: Giden = 4, Gelen = 4, Kaybolan = 0 (%0 kayp),
+Mili saniye trnden yaklaŸk tur sreleri:
+    En Az = 38ms, En €ok = 44ms, Ortalama = 41ms

