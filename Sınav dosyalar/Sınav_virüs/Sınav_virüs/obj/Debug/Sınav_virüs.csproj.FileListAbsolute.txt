@@ -1,7 +1,0 @@
-G:\Ana dizin\Çalışmalar\Sınav dosyalar\Sınav_virüs\Sınav_virüs\obj\Debug\Sınav_virüs.csprojResolveAssemblyReference.cache
-G:\Ana dizin\Çalışmalar\Sınav dosyalar\Sınav_virüs\Sınav_virüs\obj\Debug\Sınav_virüs.csproj.CoreCompileInputs.cache
-G:\Ana dizin\Çalışmalar\Sınav dosyalar\Sınav_virüs\Sınav_virüs\bin\Debug\Sınav_virüs.exe.config
-G:\Ana dizin\Çalışmalar\Sınav dosyalar\Sınav_virüs\Sınav_virüs\bin\Debug\Sınav_virüs.exe
-G:\Ana dizin\Çalışmalar\Sınav dosyalar\Sınav_virüs\Sınav_virüs\bin\Debug\Sınav_virüs.pdb
-G:\Ana dizin\Çalışmalar\Sınav dosyalar\Sınav_virüs\Sınav_virüs\obj\Debug\Sınav_virüs.exe
-G:\Ana dizin\Çalışmalar\Sınav dosyalar\Sınav_virüs\Sınav_virüs\obj\Debug\Sınav_virüs.pdb
