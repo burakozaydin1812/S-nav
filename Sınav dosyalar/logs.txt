@@ -1,0 +1,11 @@
+
+www.google.com [142.250.187.100] yoklanyor32 bayt veri ile:
+142.250.187.100 cevab: bayt=32 sre=39ms TTL=53
+142.250.187.100 cevab: bayt=32 sre=61ms TTL=53
+142.250.187.100 cevab: bayt=32 sre=38ms TTL=53
+142.250.187.100 cevab: bayt=32 sre=38ms TTL=53
+
+142.250.187.100 i‡in Ping istatisti§i:
+    Paket: Giden = 4, Gelen = 4, Kaybolan = 0 (%0 kayp),
+Mili saniye trnden yaklaŸk tur sreleri:
+    En Az = 38ms, En €ok = 61ms, Ortalama = 44ms
